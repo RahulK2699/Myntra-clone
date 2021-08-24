@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+}
+
+#container{
+    background-color: rgb(245, 245, 245);
+}
+/* .navbar {
+    display: flex;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: white;
+}
+
+.logo {
+    margin-left: 30px;
+    padding: 10px;
+}
+.navlink {
+    padding: 20px;
+}
+
+.navlink a {
+    flex: 2;
+    margin-right: 25px;
+    text-decoration: none;
+}
+
+.inputbox input {
+    width: 550px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 100px;
+    background-color: rgb(247, 244, 244);
+    border: whitesmoke;
+    border-radius: 4px;
+}
+
+.navprofile a {
+    flex: 2;
+    margin-left: 20px;
+    text-decoration: none;
+} */
+
+.head_p{
+    margin-left: 3%;
+    margin-bottom: 2%;
+}
+
+.heading_Span{
+    color: #282c3f;
+    font-weight: 500;
+}
+
+#wrapper{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    width: 50%;
+}
+
+.right{
+    width: 40%;
+    padding-left: 20px;
+}
+
+#image_block {
+    display: grid;
+    grid-gap: 1%;
+    margin-left: 5%;
+    grid-template-areas: 
+    "l1 l2"
+    "l3 l4"
+    "l5 l6";
+}
+#l1{
+    grid-area: l1;
+}
+#l2{
+    grid-area: l2;
+}
+#l3{
+    grid-area: l3;
+}
+#l4{
+    grid-area: l4;
+}
+#l5{
+    grid-area: l5;
+}
+#l6{
+    grid-area: l6;
+}
+.img{
+    width: 100%;
+}
+.right p{
+    margin-bottom: 5%;
+}
+#button_align{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 20px;
+}
