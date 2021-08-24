@@ -1,0 +1,95 @@
+* {
+    font-family: "Trirong", serif;
+}
+
+
+.navbar {
+    display: flex;
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: white;
+}
+
+.logo {
+    margin-left: 30px;
+    padding: 10px;
+}
+.navlink {
+    padding: 20px;
+}
+
+.navlink a {
+    flex: 2;
+    margin-right: 25px;
+    text-decoration: none;
+}
+
+.inputbox input {
+    width: 550px;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 100px;
+    background-color: rgb(247, 244, 244);
+    border: whitesmoke;
+    border-radius: 4px;
+}
+
+.navprofile a {
+    flex: 2;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.wholebody {
+    background-color: rgb(250, 246, 246);
+    width: 100%;
+}
+
+.cont1 {
+   width: 97%; 
+   margin: auto;
+    display: grid;
+    grid-gap: 0px;
+    grid-template-columns: auto auto auto;
+    
+}
+
+.cont1 img {
+    width: 100%;
+}
+
+.cont2 {
+    width: 100%; 
+     display: grid;
+     grid-gap: 0px;
+     grid-template-columns: auto auto auto auto;
+     grid-template-rows: 149px 149px 149px;
+     
+ }
+
+ .cont2 img {
+    width: 100%;
+}
+
+.dealx {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: auto auto auto auto auto;
+    width: 100%;
+}
+
+.dealx img {
+    width: 100%;
+}
+
+.apparelx {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto auto auto;
+    width: 50% 50%;
+}
+
+.apparelx img {
+    width: 100%;
+}
