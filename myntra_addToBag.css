@@ -12,7 +12,7 @@ html, body{
 #container{
     background-color: rgb(245, 245, 245);
 }
-/* .navbar {
+ .navbar {
     display: flex;
     position: fixed;
     height: 80px;
@@ -48,7 +48,7 @@ html, body{
     flex: 2;
     margin-left: 20px;
     text-decoration: none;
-} */
+} 
 
 .head_p{
     margin-left: 3%;
@@ -57,7 +57,7 @@ html, body{
 
 .heading_Span{
     color: #282c3f;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 #wrapper{
@@ -67,7 +67,7 @@ html, body{
 }
 
 .left{
-    width: 50%;
+    width: 80%;
 }
 
 .right{
@@ -108,9 +108,79 @@ html, body{
 .right p{
     margin-bottom: 5%;
 }
+
+.button_para{
+    width: 150px;
+    height: 30px;
+    font-weight: bold;
+}
+
+.button_para_span{
+    color: gray;
+}
+
+.price{
+    margin-top: 15px;
+}
+
+.price_span{
+    font-weight: bold;
+    color: rgb(221, 68, 13);
+    margin-left: 30px;
+}
+
+.inclu_para{
+    color: rgb(15, 173, 68);
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.select_para_span{
+    margin-left: 30px;
+    color: #ff2372;
+    font-weight: bold;
+}
+
+.select_para{
+    font-weight: bold;
+    color: black;
+}
+
 #button_align{
     display: flex;
     flex-direction: row;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+}
+
+.button_align1{
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+}
+.button_align21{
+    width:240px;
+    height: 50px;
+    background-color: #ff2372;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-radius: 3px;
+}
+
+.button_align22{
+    width:150px;
+    height: 50px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    border: none;
+    border-color: gray;
+    border-radius: 3px;
 }
