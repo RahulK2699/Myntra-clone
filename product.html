@@ -201,12 +201,20 @@
             
             let p_brand = document.createElement('p');
             p_brand.innerText = ele.Brand;
+            p_brand.style.marginBottom = '0px';
 
             let p_type = document.createElement('p');
             p_type.innerText = ele.Type;
+            p_type.style.fontWeight = '300';
+            p_type.style.marginTop = '3px';
+            p_type.style.fontSize = "13px";
+            p_type.style.color = '#616161';
+            p_type.style.marginBottom = '0px';
 
             let p_price = document.createElement('p');
-            p_price.innerText = ele.Price
+            p_price.innerText = ele.Price;
+            p_price.style.marginTop = '7px';
+            p_price.style.fontSize = '15px';
 
             let p_img = document.createElement('img');
             p_img.src = ele.image;
