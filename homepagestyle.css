@@ -25,6 +25,50 @@
     text-decoration: none;
     color: black;
 }
+.list li {
+    list-style: none;
+    width: 100px;
+    background-color: whitesmoke;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.list {
+    float: left;
+    margin-left: -40px;
+}
+
+.list li a {
+    text-decoration: none;
+    color: black;
+}
+
+.men-box:hover {
+    color: red;
+}
+
+.men-box:hover .list{
+    display: block;
+}
+
+.list li {
+    
+    background-color: green;
+}
+.list li a {
+    color: red;
+}
+
+
+.list {
+   
+    display: none;
+}
+
+.men-box {
+    text-decoration: none; 
+    color: black;
+}
 
 .inputbox input {
     width: 550px;
