@@ -162,6 +162,7 @@ h4 {
 #cat-3 > div {
   padding-top: 3px;
 }
+
 #data {
   display: grid;
   grid-template-columns: 15% 15% 15% 15% 15%;
@@ -177,4 +178,37 @@ img {
 #data div {
   display: flex;
   flex-direction: column;
+}
+#sorting-option {
+  height: 30px;
+  width: 275px;
+  margin-top: 5%;
+  float: right;
+  margin-right: 11%;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+}
+#sorting-option p {
+  margin-top: 5px;
+  width: 55px;
+  margin-right: 0px;
+  margin-left: 10px;
+  float: left;
+  font-weight: 300;
+  font-size: 14px;
+}
+#select-box {
+  float: left;
+  margin-left: 0px;
+  width: 0px;
+}
+select {
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 0px;
+  padding: 5px;
+  margin-left: 25%;
+  border: none;
+  width: 200px;
+  background-color: white;
 }
