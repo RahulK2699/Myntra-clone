@@ -27,7 +27,7 @@
 }
 .list li {
     list-style: none;
-    width: 100px;
+    width: 200px;
     background-color: whitesmoke;
     padding: 10px;
     font-size: 18px;
@@ -139,77 +139,3 @@
 .apparelx img {
     width: 100%;
 }
-
-
-#main_menu
-    {
-        background-color: white;
-        color: black;
-    padding:0px;
-    width:200px;
-    height:50px;
-    line-height:50px;
-    border-radius:5px;
-    }
-    #main_menu .main_list
-    {
-    color:white;
-    list-style-type:none;
-    float:left;
-    padding-left:27px;
-    padding-right:27px;
-    
-    }
-    #main_menu .main_list:hover
-    {
-    color:black;
-    }
-    .main_list ul
-    {
-    background-color:white;
-    width:330px;
-    position:absolute;
-    left:900px;
-    padding:0px;
-    float:left;
-    padding-bottom:10px;
-    }
-    .main_list ul p
-    {
-    color:black;
-    background-color:white;
-    margin:0px;
-    text-align:left;
-    padding-left:10px;
-    font-size:20px;
-    font-weight:bold;
-    }
-    .main_list ul ol
-    {
-    float:left;
-    padding:0px;
-    list-style-type:none;
-    margin-left:30px;
-    }
-    .main_list ul ol li
-    {
-    line-height:25px;
-    font-weight:bold;
-    font-size:16px;
-    color:black;
-    }
-    .main_list ul ol li:first-of-type 
-    {
-    list-style: none;
-    font-size:19px;
-    margin-top:10px;
-    color:black;
-    }
-    .main_list:hover ul
-    {
-    display:block;
-    }
-    .main_list ul
-    {
-    display:none;
-    }
