@@ -81,18 +81,10 @@
         </div>
     </div>
     <div id="sorting-option">
-        <p>Sort-by :
-            <div id="select-box">
-                <select name="sorting-content" id="sort-data">
-                    <option value="Better Discount">Better Discount</option>
-                    <option value="What's New">What's New</option>
-                    <option value="Type" id="p_type">Type</option>
-                    <option value="Price High To Low" class="ltoh1">Price High To Low</option>
-                    <option value="Price Low To High" class="ltoh">Price Low To High</option>
-                    <option value="Customer rating">Customer  Rating</option>
-                </select>
-            </div>
-        </p>
+       <button onclick="sortLowToHigh()">Price Low To High</button>
+       <button onclick="sortHighToLow()">Price High To Low</button>
+       <button onclick="sortByBrand()">Brand</button>
+       <button onclick="sortByType()">Type</button>
     </div>
     <div id="data">
     </div>
@@ -207,7 +199,7 @@
     //4.Data is in Json format convert into operatable format ,Object
     myproducts = JSON.parse(myproducts);
 
-    function showProduct(arr = []){
+    function showProduct(){
         let data_div = document.getElementById('data');
 
         myproducts.forEach(function(ele){
@@ -226,7 +218,7 @@
             p_type.style.marginBottom = '0px';
 
             let p_price = document.createElement('p');
-            p_price.innerText = ele.Price;
+            p_price.innerText = "Rs. "+ele.Price;
             p_price.style.marginTop = '7px';
             p_price.style.fontSize = '15px';
 
@@ -242,12 +234,83 @@
         });
     }
     showProduct();
-    
-    function sortLowToHigh(){
-      console.log("Hello Rahul"); 
+    function showData(){
+        let data_div = document.getElementById('data');
+        data_div.innerHTML = "";
+
+        product.forEach(function(ele){
+            let div = document.createElement('div');
+            
+            let p_brand = document.createElement('p');
+            p_brand.innerText = ele.Brand;
+            p_brand.style.marginBottom = '0px';
+
+            let p_type = document.createElement('p');
+            p_type.innerText = ele.Type;
+            p_type.style.fontWeight = '300';
+            p_type.style.marginTop = '3px';
+            p_type.style.fontSize = "13px";
+            p_type.style.color = '#616161';
+            p_type.style.marginBottom = '0px';
+
+            let p_price = document.createElement('p');
+            p_price.innerText = "Rs. "+ele.Price;
+            p_price.style.marginTop = '7px';
+            p_price.style.fontSize = '15px';
+
+            let p_img = document.createElement('img');
+            p_img.src = ele.image;
+
+            let a_img =document.createElement('a');
+            a_img.href ="myntra_addToBag.html"
+            a_img.append(p_img);
+
+            div.append(a_img,p_brand,p_type,p_price);
+            data_div.append(div);
+        });
     }
     
-    let sort_price_btn = document.getElementById('sort-data').getElementsByClassName('ltoh');
-    sort_price_btn[0].addEventListener('click',sortLowToHigh);
+    function sortLowToHigh(){
+      product.sort(function(a,b){
+          return a.Price - b.Price;
+      });
+      showData();
+    }
+
+
+    function sortHighToLow(){
+      product.sort(function(a,b){
+          return b.Price - a.Price;
+      });
+      showData();
+    }
+    function sortByBrand(){
+      product.sort(function(a,b){
+          let ele1 = a.Brand.toLowerCase();
+          let ele2 = b.Brand.toLowerCase();
+          if(ele1 > ele2){
+              return 1;
+          }else if(ele1 < ele2){
+              return -1;
+          }else{
+              return 0;
+          }
+      });
+      showData();
+    }
+    function sortByType(){
+      product.sort(function(a,b){
+          let ele1 = a.Type.toLowerCase();
+          let ele2 = b.Type.toLowerCase();
+          if(ele1 > ele2){
+              return 1;
+          }else if(ele1 < ele2){
+              return -1;
+          }else{
+              return 0;
+          }
+      });
+      showData();
+    }
     
 </script>
