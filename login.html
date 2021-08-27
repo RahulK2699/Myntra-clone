@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="login_style.css"/>
+    <script src="login.js"></script>
 </head>
 <body>
     <div class="navbar">
         <div class="logo">
-            <a><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmmcaLWUtIoeiCAjZIl4sP523Ma23rbm5_TvWLbxGmkDnePtvIy8wsg8ktiMGAUvt1q6c&usqp=CAU" width="42px" height="48px"></a>
+            <a href="homepage.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmmcaLWUtIoeiCAjZIl4sP523Ma23rbm5_TvWLbxGmkDnePtvIy8wsg8ktiMGAUvt1q6c&usqp=CAU" width="42px" height="48px"></a>
         </div>
        <div class="navlink">
            <a href="">MEN</a>
@@ -20,7 +21,7 @@
            <a href="">DISCOVER</a>
        </div>
        <div class="inputbox">
-           <input type="text" placeholder="Search for products, brand and more">
+           <input type="number" placeholder="Search for products, brand and more" id="numinput">
        </div>
        <div class="navprofile">
         <a href="">Wishlist</a>
@@ -37,7 +38,7 @@
             <p><span>Login</span> or <span>Signup</span></p>
             <input type="number" id="mob-no" placeholder="+91  |   Mobile Number*"/>
             <p> By continuing i agree to the  <span class="col-pink">Terms of use</span> & <span class="wspace col-pink"> privacy policy</span></p>
-            <button>CONTINUE</button>
+            <button onclick="validate()" value="number">CONTINUE</button>
             <p>Have trouble logging in? <span class="col-pink">Get help</span></p>
         </div>
     </div>
