@@ -161,10 +161,15 @@ flex-direction: column;
 }
 
 .div_card_expiry > div:nth-child(2) input{
-    width:80Px
+    width:60Px
 }
 
 .shop_item_right div:nth-child(3) input,div:nth-child(6) button{
+    width: 300px;
+    height: 40px;
+}
+
+.card_number{
     width: 300px;
     height: 40px;
 }
