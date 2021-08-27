@@ -233,7 +233,11 @@
             let p_img = document.createElement('img');
             p_img.src = ele.image;
 
-            div.append(p_img,p_brand,p_type,p_price);
+            let a_img =document.createElement('a');
+            a_img.href ="myntra_addToBag.html"
+            a_img.append(p_img);
+
+            div.append(a_img,p_brand,p_type,p_price);
             data_div.append(div);
         });
     }
