@@ -3,7 +3,7 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
-        .leftright_container {
+        .maincontent_container {
             display: flex;
         }
 
@@ -83,7 +83,7 @@
             padding: 5px;
         }
 
-        .pincode {
+        .change-add {
             border: 1px solid hotpink;
             padding: 8px 5px 10px 10px;
             color: #ff3f6c;
@@ -234,7 +234,7 @@
             margin-top: 5px;
         }
 
-        .apply-div {
+     .apply-div {
             display: flex;
             flex-direction: row;
             gap: 150px;
@@ -260,7 +260,7 @@
 
 
 
-        .applybutton {
+     .applybutton {
             padding: 4px 16px;
             height: 26px;
             width: 68px;
@@ -327,7 +327,7 @@
             display: grid;
             grid-template-columns: auto auto;
             grid-row: auto auto auto auto auto;
-            grid-gap: 5px;
+            grid-gap: 8px;
         }
 
         .couponapply-but {
