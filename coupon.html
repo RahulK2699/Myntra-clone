@@ -34,6 +34,11 @@
     .p{
         font-size: 20px;
         margin-left: 20px;
+        color: green;
+    }
+    .h{
+ font-size: 25px;
+ 
     }
     </style>
 </head>
@@ -50,22 +55,28 @@
          var div=document.getElementById('coupondiv');
          var input=document.getElementById('inputbox');
          var coupon_para=document.createElement('p');
+         var showdiscount=document.createElement('p');
+         var showtotal=document.createElement('h4');
          coupon_para.setAttribute("class","p")
+         showdiscount.setAttribute("class","p")
+         showtotal.setAttribute('class','h');
          but.onclick=function(){
              check();
          }
  function check(){
              if(input.value==='FIRST30'){
-                 var disc=760-(760*30/100);
+                  var disc=760-(760*30/100);
             coupon_para.innerText= "coupon applied";
             coupon_para.style.color= 'green';
-            console.log(disc);
+           showdiscount.innerText = "Total Discount Rs 228 applied successfully";
+           showtotal.innerText = `Total Price After Discount = Rs ${Math.round(disc)}`
+
              }else{
                 coupon_para.innerText= "coupon not valid !";
             coupon_para.style.color= 'red';
              }
              
-             div.appendChild(coupon_para);
+             div.append(coupon_para,showdiscount,showtotal);
          }
     </script>
     </body>
