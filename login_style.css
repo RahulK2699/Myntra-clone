@@ -15,7 +15,7 @@ body {
   margin-left: 55px;
   padding: 9px;
 }
-.logo > img {
+.logo > a > img {
   width: 50px;
   padding-right: 49px;
 }
@@ -36,17 +36,19 @@ body {
   text-decoration: none;
 }
 
+.inputbox {
+  width: 600px;
+  border: none;
+}
+
 .inputbox input {
-  width: 500px;
-  height: 37px;
   margin-top: 15px;
-  margin-left: 100px;
   background-color: rgb(247, 244, 244);
-  border: whitesmoke;
+  /*border: whitesmoke;*/
+  border: none;
   border-radius: 2px;
 }
 .inputbox > ::placeholder {
-  width: 270px;
   padding-left: 13%;
   background-image: url("search.png");
   background-repeat: no-repeat;
