@@ -153,11 +153,22 @@ flex-direction: column;
 .shop_item_right div{
     margin-left: 20px;
 }
+#b{
+    text-align: center;
+}
 
 .div_card_expiry{
     display: flex;
     flex-direction: row;
     gap: 10px;
+}
+
+#c{
+    text-align: center;
+}
+
+#d{
+    text-align: center;
 }
 
 .div_card_expiry > div:nth-child(2) input{
@@ -169,9 +180,10 @@ flex-direction: column;
     height: 40px;
 }
 
-.card_number{
+#card_number{
     width: 300px;
     height: 40px;
+    text-align: center;
 }
 
 .shop_item_right div:nth-child(6) button{
