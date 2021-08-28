@@ -46,22 +46,22 @@
         </div>
         <div id="cat-2">
             <p>BRAND </p>
-            <input type="checkbox"></input>
+            <input type="checkbox" id="roadster" value="roadster" onclick="showRoadster()"></input>
             <label>Roadster<span>(3159)</span></label>
             <div></div>
-            <input type="checkbox"></input>
+            <input type="checkbox"id="quancious" value="QUANCIOUS" onclick="showQuancious()"></input>
             <label>QUANCIOUS<span>(1533)</span></label>
             <div></div>
-            <input type="checkbox"></input>
+            <input type="checkbox"id="wrogn" value="WROGN" onclick="showWrogn()"></input>
             <label>WROGN<span>(1357)</span></label>
             <div></div>
-            <input type="checkbox"></input>
+            <input type="checkbox"id="puma" value="Puma" onclick="showPuma()"></input>
             <label>Puma<span>(1120)</span></label>
             <div></div>
-            <input type="checkbox"></input>
+            <input type="checkbox"id="freeauthority" value="FreeAuthority" onclick="showFreeAuthority()"></input>
             <label>Free Authority<span>(1106)</span></label>
             <div></div>
-            <input type="checkbox"></input>
+            <input type="checkbox"id="huetrap" value="Huetrap" onclick="showHuetrap()"></input>
             <label>Huetrap<span>(872)</span></label>
             <p id="p1" style="font-size: 14px;"> +495 more</p>  
         </div>
@@ -205,6 +205,16 @@
             id : '15'
         },
     ];
+
+    let checkRoadster = document.getElementById('roadster');
+    let checkPuma = document.getElementById('puma');
+    let checkWrogn = document.getElementById('wrogn');
+    let checkFreeAuthority = document.getElementById('freeauthority')
+    let checkQuancious = document.getElementById('quancious');
+    let checkHuetrap = document.getElementById('huetrap');
+    
+
+
     //1.Convert data into JSON
     const product_json = JSON.stringify(product);
 
@@ -366,6 +376,329 @@
       });
       showData();
     }
+
+    //Show Roadster Brand  Product data only
+    function showRoadster(){
+        let data_div = document.getElementById('data');
+        if((checkRoadster.checked == true) && (checkFreeAuthority.checked == false || checkHuetrap.checked == false || checkPuma.checked == false || checkQuancious.checked == false || checkWrogn.checked == false)){
+            data_div.innerHTML = "";
+        }
+        myproducts.forEach(function(ele,i){
+            if(myproducts[i].Brand == "Roadster"){
+                let div = document.createElement('div');
+                
+                let p_brand = document.createElement('p');
+                p_brand.innerText = ele.Brand;
+                p_brand.style.marginBottom = '0px';
+
+                let p_type = document.createElement('p');
+                p_type.innerText = ele.Type;
+                p_type.style.fontWeight = '300';
+                p_type.style.marginTop = '3px';
+                p_type.style.fontSize = "13px";
+                p_type.style.color = '#616161';
+                p_type.style.marginBottom = '0px';
+
+                let p_price = document.createElement('p');
+                p_price.innerText = "Rs. "+ele.Price;
+                p_price.style.marginTop = '7px';
+                p_price.style.fontSize = '15px';
+
+                let p_img = document.createElement('img');
+                p_img.src = ele.image;
+
+                let a_img =document.createElement('a');
+                a_img.href ="myntra_addToBag.html"
+                a_img.append(p_img);
+
+                let wishlist_btn = document.createElement('button');
+                wishlist_btn.id = 'btn-wishlist';
+                wishlist_btn.innerHTML = "Wishlist";
+                wishlist_btn.textContent = "Wishlist";
+                wishlist_btn.onclick = function(){
+                    wishlist_btn.style.backgroundColor = '#424242';
+                    wishlist_btn.style.color = 'white';
+                    wishlist_btn.textContent = 'Wishlisted'; 
+                    addToWishList(ele);
+                }
+
+                div.append(a_img,wishlist_btn,p_brand,p_type,p_price);
+                data_div.append(div);
+            }
+        });
+        if(checkRoadster.checked == false){
+            showProduct();
+        }
+    }
+
+    //Show Quancious product data only
+    function showQuancious(){
+        let data_div = document.getElementById('data');
+        if(checkQuancious.checked == true && (checkFreeAuthority.checked == false || checkHuetrap.checked == false || checkPuma.checked == false || checkRoadster.checked == false || checkWrogn.checked == false)){
+            data_div.innerHTML = "";
+        }
+
+        myproducts.forEach(function(ele,i){
+            if(myproducts[i].Brand == "QUANCIOUS"){
+                let div = document.createElement('div');
+                
+                let p_brand = document.createElement('p');
+                p_brand.innerText = ele.Brand;
+                p_brand.style.marginBottom = '0px';
+
+                let p_type = document.createElement('p');
+                p_type.innerText = ele.Type;
+                p_type.style.fontWeight = '300';
+                p_type.style.marginTop = '3px';
+                p_type.style.fontSize = "13px";
+                p_type.style.color = '#616161';
+                p_type.style.marginBottom = '0px';
+
+                let p_price = document.createElement('p');
+                p_price.innerText = "Rs. "+ele.Price;
+                p_price.style.marginTop = '7px';
+                p_price.style.fontSize = '15px';
+
+                let p_img = document.createElement('img');
+                p_img.src = ele.image;
+
+                let a_img =document.createElement('a');
+                a_img.href ="myntra_addToBag.html"
+                a_img.append(p_img);
+
+                let wishlist_btn = document.createElement('button');
+                wishlist_btn.id = 'btn-wishlist';
+                wishlist_btn.innerHTML = "Wishlist";
+                wishlist_btn.textContent = "Wishlist";
+                wishlist_btn.onclick = function(){
+                    wishlist_btn.style.backgroundColor = '#424242';
+                    wishlist_btn.style.color = 'white';
+                    wishlist_btn.textContent = 'Wishlisted'; 
+                    addToWishList(ele);
+                }
+
+                div.append(a_img,wishlist_btn,p_brand,p_type,p_price);
+                data_div.append(div);
+            }
+        });
+        if(checkQuancious.checked == false){
+            showProduct();
+        }
+    }
+
+    //Show Puma product data only
+    function showPuma(){
+        let data_div = document.getElementById('data');
+        data_div.innerHTML = "";
+
+        myproducts.forEach(function(ele,i){
+            if(myproducts[i].Brand == "Puma"){
+                let div = document.createElement('div');
+                
+                let p_brand = document.createElement('p');
+                p_brand.innerText = ele.Brand;
+                p_brand.style.marginBottom = '0px';
+
+                let p_type = document.createElement('p');
+                p_type.innerText = ele.Type;
+                p_type.style.fontWeight = '300';
+                p_type.style.marginTop = '3px';
+                p_type.style.fontSize = "13px";
+                p_type.style.color = '#616161';
+                p_type.style.marginBottom = '0px';
+
+                let p_price = document.createElement('p');
+                p_price.innerText = "Rs. "+ele.Price;
+                p_price.style.marginTop = '7px';
+                p_price.style.fontSize = '15px';
+
+                let p_img = document.createElement('img');
+                p_img.src = ele.image;
+
+                let a_img =document.createElement('a');
+                a_img.href ="myntra_addToBag.html"
+                a_img.append(p_img);
+
+                let wishlist_btn = document.createElement('button');
+                wishlist_btn.id = 'btn-wishlist';
+                wishlist_btn.innerHTML = "Wishlist";
+                wishlist_btn.textContent = "Wishlist";
+                wishlist_btn.onclick = function(){
+                    wishlist_btn.style.backgroundColor = '#424242';
+                    wishlist_btn.style.color = 'white';
+                    wishlist_btn.textContent = 'Wishlisted'; 
+                    addToWishList(ele);
+                }
+
+                div.append(a_img,wishlist_btn,p_brand,p_type,p_price);
+                data_div.append(div);
+            }
+        });
+        if(checkPuma.checked == false){
+            showProduct();
+        }
+    }
+
+
+    //Show wrogn product data only
+    function showWrogn(){
+        let data_div = document.getElementById('data');
+        data_div.innerHTML = "";
+
+        myproducts.forEach(function(ele,i){
+            if(myproducts[i].Brand == "WROGN"){
+                let div = document.createElement('div');
+                
+                let p_brand = document.createElement('p');
+                p_brand.innerText = ele.Brand;
+                p_brand.style.marginBottom = '0px';
+
+                let p_type = document.createElement('p');
+                p_type.innerText = ele.Type;
+                p_type.style.fontWeight = '300';
+                p_type.style.marginTop = '3px';
+                p_type.style.fontSize = "13px";
+                p_type.style.color = '#616161';
+                p_type.style.marginBottom = '0px';
+
+                let p_price = document.createElement('p');
+                p_price.innerText = "Rs. "+ele.Price;
+                p_price.style.marginTop = '7px';
+                p_price.style.fontSize = '15px';
+
+                let p_img = document.createElement('img');
+                p_img.src = ele.image;
+
+                let a_img =document.createElement('a');
+                a_img.href ="myntra_addToBag.html"
+                a_img.append(p_img);
+
+                let wishlist_btn = document.createElement('button');
+                wishlist_btn.id = 'btn-wishlist';
+                wishlist_btn.innerHTML = "Wishlist";
+                wishlist_btn.textContent = "Wishlist";
+                wishlist_btn.onclick = function(){
+                    wishlist_btn.style.backgroundColor = '#424242';
+                    wishlist_btn.style.color = 'white';
+                    wishlist_btn.textContent = 'Wishlisted'; 
+                    addToWishList(ele);
+                }
+
+                div.append(a_img,wishlist_btn,p_brand,p_type,p_price);
+                data_div.append(div);
+            }
+        });
+        if(checkWrogn.checked == false){
+            showProduct();
+        }
+    }
+
+    //Show Puma product data only
+    function showHuetrap(){
+        let data_div = document.getElementById('data');
+        data_div.innerHTML = "";
+
+        myproducts.forEach(function(ele,i){
+            if(myproducts[i].Brand == "Huetrap"){
+                let div = document.createElement('div');
+                
+                let p_brand = document.createElement('p');
+                p_brand.innerText = ele.Brand;
+                p_brand.style.marginBottom = '0px';
+
+                let p_type = document.createElement('p');
+                p_type.innerText = ele.Type;
+                p_type.style.fontWeight = '300';
+                p_type.style.marginTop = '3px';
+                p_type.style.fontSize = "13px";
+                p_type.style.color = '#616161';
+                p_type.style.marginBottom = '0px';
+
+                let p_price = document.createElement('p');
+                p_price.innerText = "Rs. "+ele.Price;
+                p_price.style.marginTop = '7px';
+                p_price.style.fontSize = '15px';
+
+                let p_img = document.createElement('img');
+                p_img.src = ele.image;
+
+                let a_img =document.createElement('a');
+                a_img.href ="myntra_addToBag.html"
+                a_img.append(p_img);
+
+                let wishlist_btn = document.createElement('button');
+                wishlist_btn.id = 'btn-wishlist';
+                wishlist_btn.innerHTML = "Wishlist";
+                wishlist_btn.textContent = "Wishlist";
+                wishlist_btn.onclick = function(){
+                    wishlist_btn.style.backgroundColor = '#424242';
+                    wishlist_btn.style.color = 'white';
+                    wishlist_btn.textContent = 'Wishlisted'; 
+                    addToWishList(ele);
+                }
+
+                div.append(a_img,wishlist_btn,p_brand,p_type,p_price);
+                data_div.append(div);
+            }
+        });
+        if(checkHuetrap.checked == false){
+            showProduct();
+        }
+    }
+
+    //Show Puma product data only
+    function showFreeAuthority(){
+        let data_div = document.getElementById('data');
+        data_div.innerHTML = "";
+
+        myproducts.forEach(function(ele,i){
+            if(myproducts[i].Brand == "Free Authority"){
+                let div = document.createElement('div');
+                
+                let p_brand = document.createElement('p');
+                p_brand.innerText = ele.Brand;
+                p_brand.style.marginBottom = '0px';
+
+                let p_type = document.createElement('p');
+                p_type.innerText = ele.Type;
+                p_type.style.fontWeight = '300';
+                p_type.style.marginTop = '3px';
+                p_type.style.fontSize = "13px";
+                p_type.style.color = '#616161';
+                p_type.style.marginBottom = '0px';
+
+                let p_price = document.createElement('p');
+                p_price.innerText = "Rs. "+ele.Price;
+                p_price.style.marginTop = '7px';
+                p_price.style.fontSize = '15px';
+
+                let p_img = document.createElement('img');
+                p_img.src = ele.image;
+
+                let a_img =document.createElement('a');
+                a_img.href ="myntra_addToBag.html"
+                a_img.append(p_img);
+
+                let wishlist_btn = document.createElement('button');
+                wishlist_btn.id = 'btn-wishlist';
+                wishlist_btn.innerHTML = "Wishlist";
+                wishlist_btn.textContent = "Wishlist";
+                wishlist_btn.onclick = function(){
+                    wishlist_btn.style.backgroundColor = '#424242';
+                    wishlist_btn.style.color = 'white';
+                    wishlist_btn.textContent = 'Wishlisted'; 
+                    addToWishList(ele);
+                }
+
+                div.append(a_img,wishlist_btn,p_brand,p_type,p_price);
+                data_div.append(div);
+            }
+        });
+        if(checkFreeAuthority.checked == false){
+            showProduct();
+        }
+    }
+
 
     //Store data into Wishlist
         if(localStorage.getItem("wishlist") === null){
