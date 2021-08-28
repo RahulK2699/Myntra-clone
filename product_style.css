@@ -198,3 +198,11 @@ button {
   font-weight: bold;
   background-color: #ff2372;
 }
+#btn-wishlist {
+  background-color: white;
+  color: #ff2372;
+  border: 1px solid #ff2372;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 13px;
+}
