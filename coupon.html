@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUPON</title>
+    <style type="text/css">
+    body{
+        background-color: rgb(247, 247, 247);
+    }
+    #coupondiv{
+        width: 35%; 
+        margin: auto;
+        margin-top: 20%;
+    }
+    #inputbox{
+    width: 90%;
+    height: 50px;
+    border:1px solid #ff3f6c;
+    border-radius: 8px;
+    text-align: center;
+    }
+    #checkbut,.contbutton{
+        border:1px solid #ff3f6c;
+        background-color: white;
+        color: #ff3f6c ;
+        border-radius: 8px;
+        height: 50px;
+        font-size: 18px;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .contbutton{
+        width: 80%;
+    }
+    a{
+        color: #ff3f6c ;
+    text-decoration: none;
+    }
+    .p{
+        font-size: 20px;
+        margin-left: 20px;
+        color: green;
+    }
+    .h{
+ font-size: 25px;
+ 
+    }
+    </style>
+</head>
+<body>
+    <div id="coupondiv">
+        <div style="display: flex;">
+       <div style="width: 70%;margin: 2%;"><input id="inputbox" type="text" placeholder="ENTER COUPON CODE"></div>
+       <div style="margin: 2%;"><button id="checkbut" >CHECK</button></div>
+        </div>
+    </div>
+
+    <script>
+         var but=document.getElementById('checkbut');
+         var div=document.getElementById('coupondiv');
+         var input=document.getElementById('inputbox');
+         var coupon_para=document.createElement('p');
+         var showdiscount=document.createElement('p');
+         var showtotal=document.createElement('h4');
+         var contbut=document.createElement('button');
+         contbut.setAttribute('class','contbutton');
+         var anch=document.createElement('a');
+         anch.innerText ='CONTINUE'
+         coupon_para.setAttribute("class","p")
+         showdiscount.setAttribute("class","p")
+         showtotal.setAttribute('class','h');
+         but.onclick=function(){
+             check();
+         }
+ function check(){
+             if(input.value==='FIRST30'){
+                  var disc=760-(760*30/100);
+            coupon_para.innerText= "coupon applied";
+            coupon_para.style.color= 'green';
+           showdiscount.innerText = "Total Discount Rs 228 applied successfully";
+           showtotal.innerText = `Total Price After Discount = Rs ${Math.round(disc)}`;
+             }else{
+                coupon_para.innerText= "coupon not valid !";
+            coupon_para.style.color= 'red';
+             }
+            
+             div.append(coupon_para,showdiscount,showtotal,contbut);
+         }
+            anch.setAttribute('href','checkoutpage2.html')
+            contbut.append(anch);
+    </script>
+    </body>
+</html>

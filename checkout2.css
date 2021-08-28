@@ -241,7 +241,6 @@
         }
 
         .display-apply {
-            /* border: 1px solid red; */
             display: flex;
             height: 100px;
             padding-top: 8px;
@@ -256,21 +255,6 @@
             padding-right: 0px;
             padding-bottom: 7px;
             padding-left: 0px;
-        }
-
-
-
-     .applybutton {
-            padding: 4px 16px;
-            height: 26px;
-            width: 68px;
-            color: #ff3f6c;
-            border: 1px solid #ff3f6c;
-            border-radius: 3px;
-            cursor: pointer;
-            font-weight: 600;
-            background: #fff;
-            font-size: 12px;
         }
 
         .login-para {
@@ -329,15 +313,6 @@
             grid-row: auto auto auto auto auto;
             grid-gap: 8px;
         }
-
-        .couponapply-but {
-            border: none;
-            font-size: 14px;
-            color: #ff3f6c;
-            background: none;
-            cursor: pointer;
-        }
-
         .conv-fee {
             font-size: 16px;
         }
@@ -348,6 +323,7 @@
             margin-top: 10px;
             margin-bottom: 10px;
             font: 600;
+            font-size: 16px;
         }
 
         .place-order {
