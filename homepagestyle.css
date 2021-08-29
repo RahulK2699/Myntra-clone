@@ -146,14 +146,15 @@
   height: 50px;
   line-height: 50px;
   border-radius: 5px;
-  margin-top: -15%;
+  margin-top: -29%;
+  
 }
 #main_menu .main_list {
   color: white;
   list-style-type: none;
   float: left;
-  padding-left: 27px;
-  padding-right: 27px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 #main_menu .main_list:hover {
   color: black;
