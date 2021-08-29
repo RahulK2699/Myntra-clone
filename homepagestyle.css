@@ -93,7 +93,7 @@
 }
 
 .cont1 {
-  width: 97%;
+  width: 100%;
   margin: auto;
   display: grid;
   grid-gap: 0px;
@@ -109,7 +109,7 @@
   display: grid;
   grid-gap: 0px;
   grid-template-columns: auto auto auto auto;
-  grid-template-rows: 149px 149px 149px;
+  grid-template-rows: 153px 149px 149px;
 }
 
 .cont2 img {
