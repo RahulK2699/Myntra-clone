@@ -102,6 +102,15 @@
   margin-left: 20%;
   float: left;
 }
+.left-box-in{
+  margin-left: 2%;
+}
+.left-box-addr{
+  background: rgb(230, 65, 65); 
+  margin: 10px;
+   border-radius: 5px; 
+   height: 38px;
+}
 
 .first-grid {
   display: grid;
@@ -109,7 +118,11 @@
   grid-template-rows: 20px;
   grid-gap: 10px;
 }
-
+.conven-div{
+  float: right; 
+  color: rgb(245, 97, 208);
+  font-weight: bold;
+}
 #right-box {
   width: 21%;
   float: left;
@@ -149,4 +162,9 @@
 
 .image-size {
   width: 100%;
+}
+.last-div{
+  float: right;
+  margin-right: 7%;
+   margin-top: -2%;
 }
