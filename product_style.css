@@ -10,6 +10,7 @@ body {
   width: 100%;
   background-color: white;
   box-shadow: 10px 5px 10px #fafafa;
+  top: 0;
 }
 .logo {
   margin-left: 55px;

@@ -9,6 +9,7 @@
   height: 80px;
   width: 100%;
   background-color: white;
+  top: 0;
 }
 
 .logo {
@@ -147,7 +148,6 @@
   line-height: 50px;
   border-radius: 5px;
   margin-top: -29%;
-  
 }
 #main_menu .main_list {
   color: white;
