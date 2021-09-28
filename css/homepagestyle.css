@@ -3,7 +3,7 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.navbar {
+#navbar {
   display: flex;
   position: fixed;
   height: 80px;
@@ -107,7 +107,7 @@
   width: 100%;
 }
 
-.cont2 {
+/* .cont2 {
   width: 100%;
   display: grid;
   grid-gap: 0px;
@@ -117,7 +117,7 @@
 
 .cont2 img {
   width: 100%;
-}
+} */
 
 .dealx {
   display: grid;
@@ -271,9 +271,9 @@
 .left-tab {
   width: auto;
   height: 100%;
-  float: left;
+  /* float: left; */
   display: flex;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 .category-hover-div {
   min-width: 1100px;
@@ -372,4 +372,39 @@
   width: 150px;
   height: 2px;
   background-color: gray;
+}
+/* ////carosle */
+
+.mySlides {
+  display: none;
+}
+
+.slideshow-container {
+  /* max-width: 1000px; */
+
+  /* position: relative; */
+
+  margin: auto;
+  margin-top: 2%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+.mySlides img {
+  width: 100%;
+  height: 400px;
+  /* ma */
 }
