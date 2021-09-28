@@ -3,7 +3,7 @@ body {
 }
 
 .navbar {
-  margin-top: 0px;
+  top: 0px;
   display: flex;
   position: fixed;
   height: 70px;

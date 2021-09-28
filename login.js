@@ -1,9 +1,9 @@
 function validate() {
     var num = document.getElementById("mobileNum").value;
     console.log(num);
-    if(num === "8552891970" || num === "7979739083" || num === "8793635952" || num === "7440786993"){
+    if(num.length===10){
         window.location.href = "homepage.html";
-       
+       alert("Login Successful")
     }else {
         alert("login Id is incorrect");
        
