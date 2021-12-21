@@ -69,8 +69,8 @@ body {
   text-decoration: none;
 }
 #main-cat-box {
-  width: 12%;
-  margin-left: 115px;
+  width: 11%;
+  margin-left: 20px;
   float: left;
 }
 #main-cat-box > p > span {
